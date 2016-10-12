@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -38,6 +38,7 @@
 		C81556CD1DAE0C9000C272DB = {
 			isa = PBXGroup;
 			children = (
+				C81556EB1DAE0CE700C272DB /* Sources */,
 				C81556D81DAE0C9000C272DB /* FTFoundationKit */,
 				C81556D71DAE0C9000C272DB /* Products */,
 			);
@@ -62,6 +63,21 @@
 				C81556E51DAE0C9000C272DB /* Info.plist */,
 			);
 			path = FTFoundationKit;
+			sourceTree = "<group>";
+		};
+		C81556EB1DAE0CE700C272DB /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C81556EC1DAE0DB100C272DB /* NetworkServer */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		C81556EC1DAE0DB100C272DB /* NetworkServer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkServer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,6 +106,7 @@
 		C81556CE1DAE0C9000C272DB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = FT;
 				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "郭伟坤";
@@ -101,7 +118,7 @@
 				};
 			};
 			buildConfigurationList = C81556D11DAE0C9000C272DB /* Build configuration list for PBXProject "FTFoundationKit" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -203,7 +220,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -247,7 +264,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
