@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8EDDD882E1E2AF9CE116A15 /* Pods_FTFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CE96426519BED661F7477A0 /* Pods_FTFoundationKit.framework */; };
 		C81556DA1DAE0C9000C272DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81556D91DAE0C9000C272DB /* AppDelegate.swift */; };
 		C81556DC1DAE0C9000C272DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81556DB1DAE0C9000C272DB /* ViewController.swift */; };
 		C81556DF1DAE0C9000C272DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C81556DD1DAE0C9000C272DB /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7CE96426519BED661F7477A0 /* Pods_FTFoundationKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FTFoundationKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FFF3ACFB252BEB8A17FFA3C /* Pods-FTFoundationKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FTFoundationKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FTFoundationKit/Pods-FTFoundationKit.debug.xcconfig"; sourceTree = "<group>"; };
 		C81556D61DAE0C9000C272DB /* FTFoundationKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTFoundationKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C81556D91DAE0C9000C272DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C81556DB1DAE0C9000C272DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		C81556E31DAE0C9000C272DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C81556E51DAE0C9000C272DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C81556ED1DAE146200C272DB /* FTHttpManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTHttpManager.swift; sourceTree = "<group>"; };
+		DCBA2059EB58C338AE877693 /* Pods-FTFoundationKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FTFoundationKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-FTFoundationKit/Pods-FTFoundationKit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,18 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8EDDD882E1E2AF9CE116A15 /* Pods_FTFoundationKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C36E2148C23FE9E0533F61A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9FFF3ACFB252BEB8A17FFA3C /* Pods-FTFoundationKit.debug.xcconfig */,
+				DCBA2059EB58C338AE877693 /* Pods-FTFoundationKit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C81556CD1DAE0C9000C272DB = {
 			isa = PBXGroup;
 			children = (
 				C81556EB1DAE0CE700C272DB /* Sources */,
 				C81556D81DAE0C9000C272DB /* FTFoundationKit */,
 				C81556D71DAE0C9000C272DB /* Products */,
+				8C36E2148C23FE9E0533F61A /* Pods */,
+				F02BB78AF7939B8D36D4E0A3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +99,14 @@
 			path = NetworkServer;
 			sourceTree = "<group>";
 		};
+		F02BB78AF7939B8D36D4E0A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7CE96426519BED661F7477A0 /* Pods_FTFoundationKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -90,9 +114,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C81556E81DAE0C9000C272DB /* Build configuration list for PBXNativeTarget "FTFoundationKit" */;
 			buildPhases = (
+				874F54D6AF8A6134634C5478 /* [CP] Check Pods Manifest.lock */,
 				C81556D21DAE0C9000C272DB /* Sources */,
 				C81556D31DAE0C9000C272DB /* Frameworks */,
 				C81556D41DAE0C9000C272DB /* Resources */,
+				23FC057FE37384B00C93B426 /* [CP] Embed Pods Frameworks */,
+				3B7B350C5896AA289A37ABE9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -150,6 +177,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		23FC057FE37384B00C93B426 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FTFoundationKit/Pods-FTFoundationKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3B7B350C5896AA289A37ABE9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FTFoundationKit/Pods-FTFoundationKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		874F54D6AF8A6134634C5478 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C81556D21DAE0C9000C272DB /* Sources */ = {
@@ -230,6 +305,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -272,6 +348,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -279,25 +356,27 @@
 		};
 		C81556E91DAE0C9000C272DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FFF3ACFB252BEB8A17FFA3C /* Pods-FTFoundationKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FTFoundationKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.forte.FTFoundationKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
 		C81556EA1DAE0C9000C272DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCBA2059EB58C338AE877693 /* Pods-FTFoundationKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FTFoundationKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.forte.FTFoundationKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -320,6 +399,7 @@
 				C81556EA1DAE0C9000C272DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
