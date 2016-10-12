@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "FTFoundationKit"
   s.version      = "1.0.0"
-  s.summary      = "A short description of FTFoundationKit."
+  s.summary      = "FTFoundationKit 是iOS基础服务工程"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,6 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
+                    此工程为复地互联网事业部iOS基础服务工程
                    DESC
 
   s.homepage     = "http://172.20.11.121:10080/iOSProjects/FTFoundationKit"
