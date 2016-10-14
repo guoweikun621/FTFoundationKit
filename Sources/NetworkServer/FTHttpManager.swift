@@ -7,7 +7,18 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
-class FTHttpManager: NSObject {
-
+public class FTHttpManager: NSObject {
+    
+    func xxx() -> Void {
+        var str = ["a", "b", "c"]
+        str = str.prefix(2).sort()
+        print(str)
+        
+        
+    }
 }
+
+

@@ -7,5 +7,6 @@ target 'FTFoundationKit' do
 
   # Pods for FTFoundationKit
   pod 'Alamofire', '~> 3.5'
-
+  pod 'SwiftyJSON', '~> 2.3.2'
+  pod 'WKBaseServicesSwift', :git => 'https://github.com/guoweikun621/WKBaseServicesSwift.git'
 end
