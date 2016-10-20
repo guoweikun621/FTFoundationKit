@@ -62,6 +62,7 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "Sources/NetworkServer", "Sources/NetworkServer/*.{swift}"
+  s.source_files  = "Sources/Common", "Sources/Common/*.{swift}"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
