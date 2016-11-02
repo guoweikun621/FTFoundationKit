@@ -155,7 +155,7 @@
 			attributes = {
 				CLASSPREFIX = FT;
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "郭伟坤";
 				TargetAttributes = {
 					C81556D51DAE0C9000C272DB = {

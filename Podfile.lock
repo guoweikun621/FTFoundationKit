@@ -1,27 +1,18 @@
 PODS:
   - Alamofire (3.5.1)
-  - SwiftyJSON (2.3.3)
-  - WKBaseServicesSwift (2.0.0)
+  - SwiftyJSON (2.4.0)
+  - WKBaseServicesSwift (2.3.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 3.5)
-  - SwiftyJSON (~> 2.3.2)
-  - WKBaseServicesSwift (from `https://github.com/guoweikun621/WKBaseServicesSwift.git`)
-
-EXTERNAL SOURCES:
-  WKBaseServicesSwift:
-    :git: https://github.com/guoweikun621/WKBaseServicesSwift.git
-
-CHECKOUT OPTIONS:
-  WKBaseServicesSwift:
-    :commit: f9dee13f067c11be3dbfab86922104397f5c07bd
-    :git: https://github.com/guoweikun621/WKBaseServicesSwift.git
+  - Alamofire (~> 3.5.1)
+  - SwiftyJSON (= 2.4.0)
+  - WKBaseServicesSwift (~> 2.3.0)
 
 SPEC CHECKSUMS:
   Alamofire: 0dfba1184a543e2aa160f4e39cac4e8aba48d223
-  SwiftyJSON: 0fd0a115a3c0c09b277d2ab801df154902b942c3
-  WKBaseServicesSwift: 3623bac4035daf07c1f19fb52371b20d0ebb4201
+  SwiftyJSON: 96918c1bf505efa50c4f72957018dd3452090c9c
+  WKBaseServicesSwift: a65f7d99a424691143511968f3960655b8c0a026
 
-PODFILE CHECKSUM: 3427ee3ed6e49e36595df7de189c49b00fcc6b76
+PODFILE CHECKSUM: 3cda73ec037c9b0ae3b906f34143b7beeef1de2a
 
-COCOAPODS: 1.1.0.beta.2
+COCOAPODS: 1.1.1
