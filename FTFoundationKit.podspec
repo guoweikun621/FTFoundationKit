@@ -84,6 +84,6 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   s.dependency "Alamofire", "~> 3.5"
-  s.dependency 'SwiftyJSON', '~> 2.3.2'
-  # s.dependency 'WKBaseServicesSwift', :git => 'https://github.com/guoweikun621/WKBaseServicesSwift.git'
+  s.dependency 'SwiftyJSON', '~> 2.4.0'
+  s.dependency 'WKBaseServicesSwift', '~>2.3.0'
 end
