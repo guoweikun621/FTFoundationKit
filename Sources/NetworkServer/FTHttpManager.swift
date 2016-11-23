@@ -18,7 +18,7 @@ public class FTHttpManager: NSObject {
         self.api = api
     }
     
-    let defaultManager: Alamofire.Manager = {
+    var defaultManager: Alamofire.Manager = {
         return Alamofire.Manager.sharedInstance
         /**
          let serverTrustPolicies: [String: ServerTrustPolicy] = [
