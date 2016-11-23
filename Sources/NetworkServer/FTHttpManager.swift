@@ -44,7 +44,8 @@ public class FTHttpManager: NSObject {
     
     func request(method: Alamofire.Method) -> Alamofire.Request {
         let p = api.params
-        let req = defaultManager.request(method, api.url.absoluteString!, parameters: p, encoding: .URLEncodedInURL, headers: nil)
+        let h = api.headers
+        let req = defaultManager.request(method, api.url.absoluteString!, parameters: p, encoding: .URLEncodedInURL, headers: h)
         return req
     }
     
