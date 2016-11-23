@@ -10,7 +10,12 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-public class FTHttpManager: NSObject {
+protocol HttpManagerProtocol {
+    var defaultManager: Alamofire.Manager { get }
+    
+}
+
+public class FTHttpManager: NSObject, HttpManagerProtocol {
     
     var api: FTBasicApi
     
@@ -20,19 +25,23 @@ public class FTHttpManager: NSObject {
     
     var defaultManager: Alamofire.Manager = {
         return Alamofire.Manager.sharedInstance
-        /**
-         let serverTrustPolicies: [String: ServerTrustPolicy] = [
-         BDURL.baseURL().absoluteString!: ServerTrustPolicy.PinCertificates(certificates: ServerTrustPolicy.certificatesInBundle(), validateCertificateChain: true, validateHost: true)
-         ]
-         
-         let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
-         configuration.HTTPAdditionalHeaders = Alamofire.Manager.defaultHTTPHeaders
-         
-         return Alamofire.Manager(
-         configuration: configuration,
-         serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicies)
-         ) */
     }()
+    
+//    var defaultManager: Alamofire.Manager = {
+//        return Alamofire.Manager.sharedInstance
+//        /**
+//         let serverTrustPolicies: [String: ServerTrustPolicy] = [
+//         BDURL.baseURL().absoluteString!: ServerTrustPolicy.PinCertificates(certificates: ServerTrustPolicy.certificatesInBundle(), validateCertificateChain: true, validateHost: true)
+//         ]
+//         
+//         let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
+//         configuration.HTTPAdditionalHeaders = Alamofire.Manager.defaultHTTPHeaders
+//         
+//         return Alamofire.Manager(
+//         configuration: configuration,
+//         serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicies)
+//         ) */
+//    }()
     
     func post() -> Alamofire.Request {
         return request(.POST)
