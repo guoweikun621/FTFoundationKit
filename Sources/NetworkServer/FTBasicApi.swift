@@ -15,7 +15,7 @@ import UIKit
     var params: [String: AnyObject]? { get }
     var headers: [String: String]? { get }
     
-    var path: NSString { get }
+    var path: NSString { get set }
     
     
     optional func addParams() -> [String: AnyObject]?
