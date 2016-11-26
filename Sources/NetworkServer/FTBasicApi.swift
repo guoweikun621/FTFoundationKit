@@ -31,9 +31,7 @@ public class FTBasicApi: NSObject {
         }
     }
     
-    var path: String {
-        return ""
-    }
+    var path: String = ""
     
     
     var params: [String: AnyObject]? {
