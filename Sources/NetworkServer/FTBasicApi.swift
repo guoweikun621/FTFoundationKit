@@ -15,7 +15,7 @@ import UIKit
     var params: [String: AnyObject]? { get }
     var headers: [String: String]? { get }
     
-    var path: NSString { get set }
+    var path: NSString { get }
     
     
     optional func addParams() -> [String: AnyObject]?
@@ -31,7 +31,9 @@ public class FTBasicApi: NSObject {
         }
     }
     
-    var path: String = ""
+    var path: String {
+        return ""
+    }
     
     
     var params: [String: AnyObject]? {
