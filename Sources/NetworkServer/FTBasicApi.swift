@@ -15,7 +15,8 @@ import UIKit
     var params: [String: AnyObject]? { get }
     var headers: [String: String]? { get }
     
-    func path() -> String
+    var path: NSString { get }
+    
     
     optional func addParams() -> [String: AnyObject]?
     optional func addHeaders() -> [String: String]?
@@ -26,13 +27,14 @@ import UIKit
 public class FTBasicApi: NSObject {
     var url: NSURL {
         get {
-            return NSURL()// BDURL.baseURL().URLByAppendingPathComponent(path())!
+            return NSURL()// BDURL.baseURL().URLByAppendingPathComponent(path)!
         }
     }
     
-    func path() -> String {
+    var path: String {
         return ""
     }
+    
     
     var params: [String: AnyObject]? {
         get {
