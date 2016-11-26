@@ -8,35 +8,33 @@
 
 import UIKit
 
-
-@objc protocol HttpApiProtocol {
+@objc public protocol FTHttpApiProtocol {
     var url: NSURL {get}
     
     var params: [String: AnyObject]? { get }
     var headers: [String: String]? { get }
     
-    var path: NSString { get }
+    var path: String { get }
     
     
     optional func addParams() -> [String: AnyObject]?
     optional func addHeaders() -> [String: String]?
-    
 }
 
 
-public class FTBasicApi: NSObject {
-    var url: NSURL {
+public class FTBasicApi: NSObject, FTHttpApiProtocol {
+    public var url: NSURL {
         get {
             return NSURL()// BDURL.baseURL().URLByAppendingPathComponent(path)!
         }
     }
     
-    var path: String {
+    public var path: String {
         return ""
     }
     
     
-    var params: [String: AnyObject]? {
+    public var params: [String: AnyObject]? {
         get {
             if let p = self.addParams() {
                 return p
@@ -46,7 +44,7 @@ public class FTBasicApi: NSObject {
         }
     }
     
-    var headers: [String: String]? {
+    public var headers: [String: String]? {
         get {
             if let h = self.addHeaders() {
                 return h
@@ -56,11 +54,11 @@ public class FTBasicApi: NSObject {
     }
     
     
-    func addParams() -> [String : AnyObject]? {
+    @objc public func addParams() -> [String : AnyObject]? {
         return nil
     }
     
-    func addHeaders() -> [String : String]? {
+    @objc public func addHeaders() -> [String : String]? {
         return nil
     }
 
