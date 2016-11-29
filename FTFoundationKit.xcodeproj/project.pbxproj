@@ -92,6 +92,7 @@
 		C81556EB1DAE0CE700C272DB /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				C8B160601DED59C5009D636C /* Views */,
 				C8370D871DB847A1005BF835 /* Common */,
 				C81556EC1DAE0DB100C272DB /* NetworkServer */,
 			);
@@ -114,6 +115,13 @@
 				C8370D881DB847B3005BF835 /* FTLogger.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		C8B160601DED59C5009D636C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		F02BB78AF7939B8D36D4E0A3 /* Frameworks */ = {
