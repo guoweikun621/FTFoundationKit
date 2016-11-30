@@ -44,10 +44,12 @@ public class FTHttpManager: NSObject, HttpManagerProtocol {
 //    }()
     
     public func post() -> Alamofire.Request {
+        FTLogger.log("** POST \n** url = \(api.url) \n** header = \(api.headers) \n** params = \(api.params)")
         return request(.POST)
     }
     
     public func get() -> Alamofire.Request {
+        FTLogger.log("** GET \n** url = \(api.url) \n** header = \(api.headers) \n** params = \(api.params)")
         return request(.GET)
     }
     
