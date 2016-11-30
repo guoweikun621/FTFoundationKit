@@ -12,7 +12,7 @@ import SwiftyJSON
 
 extension Alamofire.Request {
     /// SwiftyJSON 响应
-    func responseSwiftyJson(completion: (josn: JSON?, error: NSError?) ->Void) -> Alamofire.Request {
+    public func responseSwiftyJson(completion: (josn: JSON?, error: NSError?) ->Void) -> Alamofire.Request {
         self.responseJSON { response in
             let result = response.result
             if result.isFailure {
