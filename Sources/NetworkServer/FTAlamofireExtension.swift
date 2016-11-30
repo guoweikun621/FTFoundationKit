@@ -12,16 +12,16 @@ import SwiftyJSON
 
 extension Alamofire.Request {
     /// SwiftyJSON 响应
-    public func responseSwiftyJson(completion: (josn: JSON?, error: NSError?) ->Void) -> Alamofire.Request {
+    public func responseSwiftyJson(completion: (json: JSON?, error: NSError?) ->Void) -> Alamofire.Request {
         self.responseJSON { response in
             let result = response.result
             if result.isFailure {
                 let error = result.error
-                completion(josn: nil, error: error)
+                completion(json: nil, error: error)
             }
             else {
                 let json = JSON(result.value!)
-                completion(josn: json, error: nil)
+                completion(json: json, error: nil)
             }
         }
         return self
