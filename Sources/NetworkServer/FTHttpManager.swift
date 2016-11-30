@@ -17,9 +17,9 @@ protocol HttpManagerProtocol {
 
 public class FTHttpManager: NSObject, HttpManagerProtocol {
     
-    var api: FTBasicApi
+    public var api: FTBasicApi
     
-    init(api: FTBasicApi) {
+    public init(api: FTBasicApi) {
         self.api = api
     }
     
@@ -43,11 +43,11 @@ public class FTHttpManager: NSObject, HttpManagerProtocol {
 //         ) */
 //    }()
     
-    func post() -> Alamofire.Request {
+    public func post() -> Alamofire.Request {
         return request(.POST)
     }
     
-    func get() -> Alamofire.Request {
+    public func get() -> Alamofire.Request {
         return request(.GET)
     }
     
