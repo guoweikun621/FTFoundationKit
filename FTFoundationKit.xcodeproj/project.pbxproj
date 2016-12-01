@@ -14,7 +14,6 @@
 		C81556E11DAE0C9000C272DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C81556E01DAE0C9000C272DB /* Assets.xcassets */; };
 		C81556E41DAE0C9000C272DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C81556E21DAE0C9000C272DB /* LaunchScreen.storyboard */; };
 		C81556EE1DAE146200C272DB /* FTHttpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81556ED1DAE146200C272DB /* FTHttpManager.swift */; };
-		C81556F01DAF2AC000C272DB /* FTAlamofireExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81556EF1DAF2AC000C272DB /* FTAlamofireExtension.swift */; };
 		C81556F21DAF2EF300C272DB /* FTBasicApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81556F11DAF2EF300C272DB /* FTBasicApi.swift */; };
 		C8370D891DB847B3005BF835 /* FTLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8370D881DB847B3005BF835 /* FTLogger.swift */; };
 /* End PBXBuildFile section */
@@ -30,7 +29,6 @@
 		C81556E31DAE0C9000C272DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C81556E51DAE0C9000C272DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C81556ED1DAE146200C272DB /* FTHttpManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTHttpManager.swift; sourceTree = "<group>"; };
-		C81556EF1DAF2AC000C272DB /* FTAlamofireExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTAlamofireExtension.swift; sourceTree = "<group>"; };
 		C81556F11DAF2EF300C272DB /* FTBasicApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTBasicApi.swift; sourceTree = "<group>"; };
 		C8370D881DB847B3005BF835 /* FTLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTLogger.swift; sourceTree = "<group>"; };
 		DCBA2059EB58C338AE877693 /* Pods-FTFoundationKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FTFoundationKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-FTFoundationKit/Pods-FTFoundationKit.release.xcconfig"; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				C81556ED1DAE146200C272DB /* FTHttpManager.swift */,
-				C81556EF1DAF2AC000C272DB /* FTAlamofireExtension.swift */,
 				C81556F11DAF2EF300C272DB /* FTBasicApi.swift */,
 			);
 			path = NetworkServer;
@@ -256,7 +253,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C81556F01DAF2AC000C272DB /* FTAlamofireExtension.swift in Sources */,
 				C81556EE1DAE146200C272DB /* FTHttpManager.swift in Sources */,
 				C81556DC1DAE0C9000C272DB /* ViewController.swift in Sources */,
 				C81556DA1DAE0C9000C272DB /* AppDelegate.swift in Sources */,
@@ -392,6 +388,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FTFoundationKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.forte.FTFoundationKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 2.3;
