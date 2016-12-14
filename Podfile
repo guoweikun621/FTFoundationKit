@@ -6,7 +6,7 @@ target 'FTFoundationKit' do
   use_frameworks!
 
   # Pods for FTFoundationKit
-  pod 'Alamofire', '~> 3.5.1'
-  pod 'SwiftyJSON', '2.4.0'
-  pod 'WKBaseServicesSwift', '~> 2.3.0'
+  pod 'Alamofire', '~> 4.2.0'
+  pod 'SwiftyJSON', '~> 3.1.3'
+  pod 'WKBaseServicesSwift', '~> 3.0.0'
 end

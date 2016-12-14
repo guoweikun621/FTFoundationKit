@@ -9,7 +9,7 @@
 import UIKit
 
 @objc public protocol FTHttpApiProtocol {
-    var url: NSURL {get}
+    var url: URL {get}
     
     var params: [String: AnyObject]? { get }
     var headers: [String: String]? { get }
@@ -17,15 +17,15 @@ import UIKit
     var path: String { get }
     
     
-    optional func addParams() -> [String: AnyObject]?
-    optional func addHeaders() -> [String: String]?
+    @objc optional func addParams() -> [String: AnyObject]?
+    @objc optional func addHeaders() -> [String: String]?
 }
 
 
 public class FTBasicApi: NSObject, FTHttpApiProtocol {
-    public var url: NSURL {
+    public var url: URL {
         get {
-            return NSURL()// BDURL.baseURL().URLByAppendingPathComponent(path)!
+            return URL(string: "")!// BDURL.baseURL().URLByAppendingPathComponent(path)!
         }
     }
     
@@ -65,6 +65,6 @@ public class FTBasicApi: NSObject, FTHttpApiProtocol {
 }
 
 public class FTUploadApi: FTBasicApi {
-    var filePaths = [NSURL]()
+    var filePaths = [URL]()
     
 }

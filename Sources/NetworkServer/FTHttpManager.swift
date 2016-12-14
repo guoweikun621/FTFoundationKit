@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 protocol HttpManagerProtocol {
-    var defaultManager: Alamofire.Manager { get }
+    var defaultManager: Alamofire.SessionManager { get }
     
 }
 
@@ -23,8 +23,8 @@ public class FTHttpManager: NSObject, HttpManagerProtocol {
         self.api = api
     }
     
-    var defaultManager: Alamofire.Manager = {
-        return Alamofire.Manager.sharedInstance
+    var defaultManager: Alamofire.SessionManager = {
+        return Alamofire.SessionManager.default
     }()
     
 //    var defaultManager: Alamofire.Manager = {
@@ -43,38 +43,38 @@ public class FTHttpManager: NSObject, HttpManagerProtocol {
 //         ) */
 //    }()
     
-    public func post() -> Alamofire.Request {
-        return request(.POST)
+    public func post() -> DataRequest {
+        return request(method: .post)
     }
     
-    public func get() -> Alamofire.Request {
-        return request(.GET)
+    public func get() -> DataRequest {
+        return request(method: .get)
     }
     
-    func request(method: Alamofire.Method) -> Alamofire.Request {
+    func request(method: Alamofire.HTTPMethod) -> DataRequest {
         let p = api.params
         let h = api.headers
-        let req = defaultManager.request(method, api.url.absoluteString!, parameters: p, encoding: .URLEncodedInURL, headers: h)
+        let req = defaultManager.request(api.url.absoluteString, method: method, parameters: p, encoding: URLEncoding.default, headers: h)
         return req
     }
     
-    func upload(complation: (result: Manager.MultipartFormDataEncodingResult) -> Void?) {
+    func upload(complation: @escaping (_ result: SessionManager.MultipartFormDataEncodingResult) -> Void?) {
         if let uApi = api as? FTUploadApi {
             let files = uApi.filePaths
-            
-            defaultManager.upload(.POST, api.url, multipartFormData: { formData in
+
+            defaultManager.upload(multipartFormData: { (formData) in
                 var idx = 0
                 files.forEach({ file in
-                    formData.appendBodyPart(fileURL: file, name: "file\(idx)")
+                    formData.append(file, withName: "file\(idx)")
                     idx += 1
                 })
-                }, encodingCompletion: { res in
-                    switch res {
-                    case .Success(let request, let streamingFromDisk, let streamFileURL):
-                        complation(result: .Success(request: request, streamingFromDisk: streamingFromDisk, streamFileURL: streamFileURL))
-                    case .Failure(let eType):
-                        complation(result: .Failure(eType))
-                    }
+            }, to: api.url, encodingCompletion: { (res) in
+                switch res {
+                case .success(let request, let streamingFromDisk, let streamFileURL):
+                    complation(.success(request: request, streamingFromDisk: streamingFromDisk, streamFileURL: streamFileURL))
+                case .failure(let eType):
+                    complation(.failure(eType))
+                }
             })
         }
         
