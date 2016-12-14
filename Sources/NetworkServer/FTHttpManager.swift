@@ -23,7 +23,7 @@ open class FTHttpManager: NSObject, HttpManagerProtocol {
         self.api = api
     }
     
-    public var defaultManager: Alamofire.SessionManager = {
+    open var defaultManager: Alamofire.SessionManager = {
         return Alamofire.SessionManager.default
     }()
     
