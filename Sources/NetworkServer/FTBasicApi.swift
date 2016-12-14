@@ -23,13 +23,13 @@ import UIKit
 
 
 open class FTBasicApi: NSObject, FTHttpApiProtocol {
-    public var url: URL {
+    open var url: URL {
         get {
             return URL(string: "")!// BDURL.baseURL().URLByAppendingPathComponent(path)!
         }
     }
     
-    public var path: String {
+    open var path: String {
         return ""
     }
     
@@ -54,11 +54,11 @@ open class FTBasicApi: NSObject, FTHttpApiProtocol {
     }
     
     
-    @objc public func addParams() -> [String : Any]? {
+    @objc open func addParams() -> [String : Any]? {
         return nil
     }
     
-    @objc public func addHeaders() -> [String : String]? {
+    @objc open func addHeaders() -> [String : String]? {
         return nil
     }
 
