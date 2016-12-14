@@ -10,12 +10,12 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-protocol HttpManagerProtocol {
+public protocol HttpManagerProtocol {
     var defaultManager: Alamofire.SessionManager { get }
     
 }
 
-public class FTHttpManager: NSObject, HttpManagerProtocol {
+open class FTHttpManager: NSObject, HttpManagerProtocol {
     
     public var api: FTBasicApi
     
@@ -23,7 +23,7 @@ public class FTHttpManager: NSObject, HttpManagerProtocol {
         self.api = api
     }
     
-    var defaultManager: Alamofire.SessionManager = {
+    public var defaultManager: Alamofire.SessionManager = {
         return Alamofire.SessionManager.default
     }()
     
