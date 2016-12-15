@@ -10,12 +10,8 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-public protocol HttpManagerProtocol {
-    var defaultManager: Alamofire.SessionManager { get }
-    
-}
 
-open class FTHttpManager: NSObject, HttpManagerProtocol {
+open class FTHttpManager: NSObject {
     
     public var api: FTBasicApi
     
