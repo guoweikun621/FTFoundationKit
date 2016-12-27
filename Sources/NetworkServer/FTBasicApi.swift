@@ -65,6 +65,6 @@ open class FTBasicApi: NSObject, FTHttpApiProtocol {
 }
 
 open class FTUploadApi: FTBasicApi {
-    public var filePaths = [URL]()
+    open var filePaths = [URL]()
     
 }

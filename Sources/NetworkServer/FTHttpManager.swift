@@ -54,7 +54,7 @@ open class FTHttpManager: NSObject {
         return req
     }
     
-    func upload(complation: @escaping (_ result: SessionManager.MultipartFormDataEncodingResult) -> Void?) {
+    open func upload(complation: @escaping (_ result: SessionManager.MultipartFormDataEncodingResult) -> Void?) {
         if let uApi = api as? FTUploadApi {
             let files = uApi.filePaths
 
