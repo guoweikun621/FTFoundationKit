@@ -65,12 +65,13 @@ open class FTHttpManager: NSObject {
                     idx += 1
                 })
             }, to: api.url, encodingCompletion: { (res) in
-                switch res {
-                case .success(let request, let streamingFromDisk, let streamFileURL):
-                    complation(.success(request: request, streamingFromDisk: streamingFromDisk, streamFileURL: streamFileURL))
-                case .failure(let eType):
-                    complation(.failure(eType))
-                }
+                complation(res)
+//                switch res {
+//                case .success(let request, let streamingFromDisk, let streamFileURL):
+//                    complation(.success(request: request, streamingFromDisk: streamingFromDisk, streamFileURL: streamFileURL))
+//                case .failure(let eType):
+//                    complation(.failure(eType))
+//                }
             })
         }
         
