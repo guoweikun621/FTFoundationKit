@@ -39,11 +39,11 @@ open class FTHttpManager: NSObject {
 //         ) */
 //    }()
     
-    public func post() -> DataRequest {
+    open func post() -> DataRequest {
         return request(method: .post)
     }
     
-    public func get() -> DataRequest {
+    open func get() -> DataRequest {
         return request(method: .get)
     }
     
