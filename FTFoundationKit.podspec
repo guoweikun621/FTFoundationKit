@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
                     此工程为Fosun - iOS基础服务工程
                    DESC
 
-  s.homepage     = "http://172.20.11.121:10080/iOSProjects/FTFoundationKit"
+  s.homepage     = "https://github.com/guoweikun621/FTFoundationKit"
 
   s.license      = "MIT"
 
@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.platform     = :ios, "8.0"
 
-  s.source       = { :git => "http://172.20.11.121:10080/iOSProjects/FTFoundationKit.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/guoweikun621/FTFoundationKit.git", :tag => "#{s.version}" }
 
 
   s.source_files  = "Sources/NetworkServer/*.{swift}","Sources/Common/*.{swift}"
@@ -43,7 +43,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency "Alamofire", "~> 4.2.0"
-  s.dependency 'SwiftyJSON', '~> 3.1.0'
+  s.dependency "Alamofire", "~> 4.4.0"
+  s.dependency 'SwiftyJSON', '~> 3.1.4'
   s.dependency 'WKBaseServicesSwift', '~>3.0.0'
 end
