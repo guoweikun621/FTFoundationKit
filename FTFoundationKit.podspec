@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.summary      = "FTFoundationKit 是iOS基础服务工程"
 
   s.description  = <<-DESC
-                    此工程为Fosun - iOS基础服务工程
+                    此工程为Fosun - iOS基础服务工程，专门为互联网项目准备。不作其它用处。
                    DESC
 
   s.homepage     = "https://github.com/guoweikun621/FTFoundationKit"
