@@ -8,5 +8,5 @@ target 'FTFoundationKit' do
   # Pods for FTFoundationKit
   pod 'Alamofire', '~> 4.2.0'
   pod 'SwiftyJSON', '~> 3.1.3'
-  pod 'WKBaseServicesSwift', '~> 3.0.0'
+  pod 'WKBaseServicesSwift', '~> 3.0.3'
 end
