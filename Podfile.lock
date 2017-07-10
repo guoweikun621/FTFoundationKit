@@ -1,18 +1,41 @@
 PODS:
-  - Alamofire (4.2.0)
+  - Alamofire (4.4.0)
+  - CryptoSwift (0.6.9)
+  - Moya/Core (8.0.5):
+    - Alamofire (~> 4.1)
+    - Result (~> 3.0)
+  - Moya/RxSwift (8.0.5):
+    - Moya/Core
+    - RxSwift (~> 3.0)
+  - Result (3.2.3)
+  - RxCocoa (3.5.0):
+    - RxSwift (~> 3.4)
+  - RxSwift (3.5.0)
+  - SVProgressHUD (2.1.2)
   - SwiftyJSON (3.1.4)
-  - WKBaseServicesSwift (3.0.2)
+  - WKBaseServicesSwift (3.0.3):
+    - CryptoSwift (~> 0.6.9)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.2.0)
-  - SwiftyJSON (~> 3.1.3)
-  - WKBaseServicesSwift (~> 3.0.0)
+  - Alamofire (~> 4.4.0)
+  - Moya/RxSwift (~> 8.0.5)
+  - RxCocoa (~> 3.5.0)
+  - RxSwift (~> 3.5.0)
+  - SVProgressHUD (~> 2.1.2)
+  - SwiftyJSON (~> 3.1.4)
+  - WKBaseServicesSwift (~> 3.0.3)
 
 SPEC CHECKSUMS:
-  Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  CryptoSwift: a22f6ba238e9ce4d26ee7bf45b9ed82e7122d4a0
+  Moya: c37eec09a098ba9991b5a963b291fc5704bdb9ef
+  Result: 128640a6347e8d2ae48b142556739a2d13f90ce6
+  RxCocoa: a0a09f45d0e5b48ecb6a4a7b4b4c89c88d3f633f
+  RxSwift: 18ee9d78b45edb3b0b7e79916b47a116e6dbc842
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
-  WKBaseServicesSwift: a2aa5ea9458615b9341c7728ac112876ed4bef34
+  WKBaseServicesSwift: a8a29379ddb6450fe4d5a15d33249a8d3b58eb73
 
-PODFILE CHECKSUM: 47804214659324b5724f587704d59ae32a75eb8a
+PODFILE CHECKSUM: 01222ebf32c43dd8b05c3d473e89ecfff64c04bd
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1

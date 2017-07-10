@@ -54,24 +54,28 @@ open class FTHttpManager: NSObject {
         return req
     }
     
-    open func upload(complation: @escaping (_ result: SessionManager.MultipartFormDataEncodingResult) -> Void?) {
+    open func uploadImageData(completion: ((SessionManager.MultipartFormDataEncodingResult) -> Void)?) {
+        if let api = api as? FTUploadApi {
+            let datas = api.fileDatas
+            
+            defaultManager.upload(multipartFormData: { (formData) in
+                for (idx, data) in datas.enumerated() {
+                    formData.append(data, withName: "file\(idx)")
+                }
+            }, to: api.url, encodingCompletion: completion)
+        }
+    }
+    
+    open func upload(complation: ((SessionManager.MultipartFormDataEncodingResult) -> Void)?) {
         if let uApi = api as? FTUploadApi {
             let files = uApi.filePaths
 
             defaultManager.upload(multipartFormData: { (formData) in
-                var idx = 0
-                files.forEach({ file in
+                for (idx, file) in files.enumerated() {
                     formData.append(file, withName: "file\(idx)")
-                    idx += 1
-                })
+                }
             }, to: api.url, encodingCompletion: { (res) in
-                complation(res)
-//                switch res {
-//                case .success(let request, let streamingFromDisk, let streamFileURL):
-//                    complation(.success(request: request, streamingFromDisk: streamingFromDisk, streamFileURL: streamFileURL))
-//                case .failure(let eType):
-//                    complation(.failure(eType))
-//                }
+                complation?(res)
             })
         }
         
