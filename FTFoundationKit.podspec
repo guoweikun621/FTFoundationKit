@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "FTFoundationKit"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "FTFoundationKit 是iOS基础服务工程"
 
   s.description  = <<-DESC
@@ -45,5 +45,5 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   s.dependency "Alamofire", "~> 4.4.0"
   s.dependency 'SwiftyJSON', '~> 3.1.4'
-  s.dependency 'WKBaseServicesSwift', '~>3.0.3'
+  s.dependency 'WKBaseServicesSwift', '~>3.2.0'
 end

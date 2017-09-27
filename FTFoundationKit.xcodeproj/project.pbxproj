@@ -16,7 +16,7 @@
 		C81556EE1DAE146200C272DB /* FTHttpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81556ED1DAE146200C272DB /* FTHttpManager.swift */; };
 		C81556F21DAF2EF300C272DB /* FTBasicApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81556F11DAF2EF300C272DB /* FTBasicApi.swift */; };
 		C8370D891DB847B3005BF835 /* FTLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8370D881DB847B3005BF835 /* FTLogger.swift */; };
-		C8C925C21F7B4B1300BA6D47 /* FTFoundationKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C8C925C11F7B4B1300BA6D47 /* FTFoundationKit.podspec */; };
+		C8C925C41F7B4C7500BA6D47 /* FTFoundationKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C8C925C31F7B4C7500BA6D47 /* FTFoundationKit.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +32,7 @@
 		C81556ED1DAE146200C272DB /* FTHttpManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTHttpManager.swift; sourceTree = "<group>"; };
 		C81556F11DAF2EF300C272DB /* FTBasicApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTBasicApi.swift; sourceTree = "<group>"; };
 		C8370D881DB847B3005BF835 /* FTLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTLogger.swift; sourceTree = "<group>"; };
-		C8C925C11F7B4B1300BA6D47 /* FTFoundationKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FTFoundationKit.podspec; sourceTree = "<group>"; };
+		C8C925C31F7B4C7500BA6D47 /* FTFoundationKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FTFoundationKit.podspec; sourceTree = SOURCE_ROOT; };
 		DCBA2059EB58C338AE877693 /* Pods-FTFoundationKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FTFoundationKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-FTFoundationKit/Pods-FTFoundationKit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,7 +79,7 @@
 		C81556D81DAE0C9000C272DB /* FTFoundationKit */ = {
 			isa = PBXGroup;
 			children = (
-				C8C925C11F7B4B1300BA6D47 /* FTFoundationKit.podspec */,
+				C8C925C31F7B4C7500BA6D47 /* FTFoundationKit.podspec */,
 				C81556D91DAE0C9000C272DB /* AppDelegate.swift */,
 				C81556DB1DAE0C9000C272DB /* ViewController.swift */,
 				C81556DD1DAE0C9000C272DB /* Main.storyboard */,
@@ -196,7 +196,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8C925C21F7B4B1300BA6D47 /* FTFoundationKit.podspec in Resources */,
+				C8C925C41F7B4C7500BA6D47 /* FTFoundationKit.podspec in Resources */,
 				C81556E41DAE0C9000C272DB /* LaunchScreen.storyboard in Resources */,
 				C81556E11DAE0C9000C272DB /* Assets.xcassets in Resources */,
 				C81556DF1DAE0C9000C272DB /* Main.storyboard in Resources */,
